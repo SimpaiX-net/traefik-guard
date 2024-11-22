@@ -1,0 +1,15 @@
+displayName: traefik-guard
+type: middleware
+import: github.com/SimpaiX-net/traefik-guard
+
+summary: Guard is an elegant IPQS plugin for Traefik. Acting as a middleware or microservice between your web server.
+iconPath: img/image.png
+bannerPath: img/image.png
+
+testData:
+  proxy: 
+  ttl: 168h
+  timeout: 400ms
+  ipHeaders:
+    - "cf-connecting-ip" # if your backend hides behind CF's reverse proxies
+    - "X-Forwarded-For"
