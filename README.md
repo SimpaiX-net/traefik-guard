@@ -26,21 +26,22 @@ ipHeaders: # must be set
 ```
 
 ### Additional notes
-Guard uses **InternetDB** to determine the reputation of an ip/host. It's completely free, and allows high traffic throughput. You can always use ``proxy`` sub-directive with Guard to allow a limitless quota when needed. 
+Guard uses **InternetDB** to determine the reputation of an ioT device. It's completely free, and allows high traffic throughput. You can always use ``proxy``to allow a limitless quota when needed. 
 
 To be fast and not halter or negatively impact your avg response times while sitting as an intermediary between your backend, Guard is effectively using an in memory-cache.
 
-Here's the performance benchmark:
+Here's the performance benchmark (for the in memory cache):
 ```
-Running tool: C:\Program Files\Go\bin\go.exe test -benchmem -run=^$ -bench ^BenchmarkGuard$ github.com/SimpaiX-net/traefik-guard
+Running tool: C:\Program Files\Go\bin\go.exe test -benchmem -run=^$ -bench ^BenchmarkClient$ github.com/SimpaiX-net/ipqs/tests
 
 goos: windows
 goarch: amd64
-pkg: github.com/SimpaiX-net/traefik-guard
+pkg: github.com/SimpaiX-net/ipqs/tests
 cpu: AMD Ryzen 7 4800H with Radeon Graphics         
-BenchmarkGuard-16    	 1045155	      1102 ns/op	    1665 B/op	      19 allocs/op
+BenchmarkClient-16    	 8923340	       135.7 ns/op	     256 B/op	       4 allocs/op
 PASS
-ok  	github.com/SimpaiX-net/traefik-guard	2.966s
+ok  	github.com/SimpaiX-net/ipqs/tests	2.911s
+
 ```
 
 
