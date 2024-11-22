@@ -2,7 +2,7 @@
 
 <div align="center">   
     <div>
-        <img src="img/logo.png" width=300 style="border: 2px solid grey;"><br>
+        <img src="img/guard.png" width=300 style="border: 2px solid grey;"><br>
     </div>
 </div>
 
